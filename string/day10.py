@@ -29,7 +29,11 @@ print(cal2.add(7))
 """
 
 class FourCal:
-    
+
+    def __init__(self, first, second):
+        self.first = first
+        self.second = second
+
     def setdata(self, first, second): # 메서드
         self.first = first
         self.second = second
@@ -50,10 +54,8 @@ class FourCal:
         result = self.first / self.second
         return result
 
-a = FourCal()
-b = FourCal()
-a.setdata(4, 2)
-b.setdata(3, 8)
+a = FourCal(4, 2)
+b = FourCal(3, 8)
 print(a.first)
 print(b.second)
 
@@ -71,3 +73,37 @@ print(b.div())
 
 
 # 생성자
+# 위 클래스에 추가해야함
+# 클래스가 실행될 때 가장 먼저 실행됨
+# 객체를 초기화하거나 초깃값을 설정하는데 사용
+"""
+def __init__(self, first, second):
+    self.first = first
+    self.second = second
+"""
+
+# 클래스의 상속
+# class 클래스_이름(상속할_클래스_이름)
+class MoreFourCal(FourCal):
+    def pow(self):
+        result = self.first ** self.second
+        return result
+
+c = MoreFourCal(4, 2)
+print(c.pow()) 
+
+# a = FourCal(4, 0)
+# print(a.div())
+# 오류발생, 해결방법 메서드 오버라이딩
+
+# 오버라이딩
+# div메서드를 동일한 이름으로 다시 만드는 것
+class SafeFourCal(FourCal):
+    def div(self):
+        if self.second == 0 :
+            return 0
+        else:
+            return self.first / self.second
+
+a = SafeFourCal(4, 0)
+print(a.div())
