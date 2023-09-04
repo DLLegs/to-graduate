@@ -1,12 +1,15 @@
-a = int(input("점수 입력: "))
+def add_mul(what, *args):
+    if what == "add":
+        result = 0
+        for i in args:
+            result = result + i
+    elif what == "mul":
+        result = 1
+        for i in args:
+            result = result * i
+    return result
 
-if a >= 90:
-    print("A")
-elif a >= 80:
-    print("B")
-elif a >= 70:
-    print("C")
-elif a >= 60:
-    print("D")
-else:
-    print("F")
+result = add_mul('add', 1,2,3,4,5)
+print(result)
+result = add_mul('mul', 1,2,3)
+print(result)
