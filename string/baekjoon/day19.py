@@ -48,10 +48,3 @@
 #     print(1)
 # else:
 #     print(0)
-
-# 백준 1157번 문제
-# 입력값: 영어 문자열
-# 출력값: 가장 많이 사용한 문자, 여러개면 ? 출력
-
-word = input().upper()
-word_list = list(set(word))
