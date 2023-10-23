@@ -1,19 +1,19 @@
 # 백준 2738번 문제
 # 입력값: N * M 크기 행렬
 # 출력값: 두 행렬을 더한 값
-# n,m=map(int,input().split())
-# a=[[0 for col in range(m)] for row in range(n)] #이중 리스트 컴프리헨션
-# b=[[0 for col in range(m)] for row in range(n)]
+n,m=map(int,input().split())
+a=[[0 for col in range(m)] for row in range(n)] #이중 리스트 컴프리헨션
+b=[[0 for col in range(m)] for row in range(n)]
 
-# for i in range(n):
-#     a[i]=list(map(int, input().split()))
-# for i in range(n):
-#     b[i] = list(map(int, input().split()))
+for i in range(n):
+    a[i]=list(map(int, input().split()))
+for i in range(n):
+    b[i] = list(map(int, input().split()))
 
-# for i in range(n):
-#     for j in range(m):
-#         print(a[i][j]+b[i][j],end=" ")
-#     print()
+for i in range(n):
+    for j in range(m):
+        print(a[i][j]+b[i][j],end=" ")
+    print()
 
 # 백준 2566번 문제
 # 입력값: 첫째 줄부터 아홉 번째 줄까지 한 줄에 아홉개의 수
