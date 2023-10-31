@@ -12,7 +12,6 @@ for j in range(15):
 # 입력값: 색종이의 개수, 색종이의 위치
 # 출력값: 색종이가 붙은 영역의 넓이
 
-
 ary = [[0 for _ in range(101)] for _ in range(101)]
 N = int(input())
 
