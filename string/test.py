@@ -1,15 +1,12 @@
-def add_mul(what, *args):
-    if what == "add":
-        result = 0
-        for i in args:
-            result = result + i
-    elif what == "mul":
-        result = 1
-        for i in args:
-            result = result * i
-    return result
+hour, min = map(int,input().split())
+plus = int(input())
 
-result = add_mul('add', 1,2,3,4,5)
-print(result)
-result = add_mul('mul', 1,2,3)
-print(result)
+if min + plus >=60:
+    Rmin = (min + plus) % 60
+    hour = hour + ((min + plus) // 60)
+else:
+    min = min + plus
+if hour >= 24:
+    hour = hour - 24
+
+print(hour, Rmin)
