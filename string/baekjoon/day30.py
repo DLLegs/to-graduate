@@ -1,25 +1,40 @@
-# 백준 7567번 문제
+# 백준 10886번 문제
 
-dish = input()
-heigh = 10
+join_people = int(input())
+cye = 0
 
-for i in range(1, len(dish)):
-    if dish[i] == dish[i-1]:
-        heigh += 5
+for i in range (join_people):
+    num = int(input())
+
+    if num == 0 :
+        cye -= 1
     else:
-        heigh += 10
-print(heigh)
+        cye += 1
+    
+if cye < 0:
+    print("Junhee is not cute!")
+else:
+    print("Junhee is cute!")
 
-# 백준 5063번 문제
+# 백준 5086번 문제
 
-test_case = int(input())
+while True:
+    A, B = map(int, input().split())
 
-for i in range(test_case):
-    r, e, c = map(int, input().split())
-    a = e -c
-    if r < a:
-        print("advertise")
-    elif r == a:
-        print("does not matter")
+    if A == 0 and B == 0:
+        break
+    
+    elif B % A == 0:
+        print("factor")
+    elif A % B == 0:
+        print("multiple")
     else:
-        print("do not advertise")
+        print("neither")
+    
+# 백준 5717번 문제
+
+while True:
+    A, B = map(int, input().split())
+    if A == 0 and B == 0:
+        break
+    print(A + B)
