@@ -43,8 +43,8 @@ for i in range(a-1,0,-1):
 # 입력값: 영어 문자열
 # 출력값: 팰린드롬 1 아니면 0
 
-# what_pl = input()
-# if what_pl[::1] == what_pl[::-1]:
-#     print(1)
-# else:
-#     print(0)
+what_pl = input()
+if what_pl[::1] == what_pl[::-1]:
+    print(1)
+else:
+    print(0)
