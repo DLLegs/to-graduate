@@ -7,6 +7,8 @@
 # 여기서 마지막 A는 마지막날 정상에 도착을 의미
 # day = (V - A)/(A - B) + 1
 # + 1 은 마지막 날이 빠졌기 때문
+# 삼항 연산자
+# [True] if [조건문(Condition)] else [False]
 
 A, B ,V = map(int,(input().split()))
 
