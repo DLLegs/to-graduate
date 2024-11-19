@@ -18,13 +18,13 @@ while True:
 # # 1/1 -> 1/2 -> 2/1 -> 3/1 -> 2/2
 # # 1 -> 2 -> 3 -> 4 -> 5
 
-# N = int(input())
-# line = 1
+N = int(input())
+line = 1
 
-# while N > line:  # 대각선 라인을 찾기위해서
-#     N -= line
-#     line += 1
+while N > line:  # 대각선 라인을 찾기위해서
+    N -= line
+    line += 1
 
-# if line % 2 == 0:
-#     up = N
-#     down = line - N + 1
+if line % 2 == 0:
+    up = N
+    down = line - N + 1

@@ -1,5 +1,5 @@
 # 백준 12865번 문제
-# 동적 프로그래밍, 냅색알고리즘
+# 동적 프로그래밍, knask
 
 N, K = map(int, input().split())
 items = []
