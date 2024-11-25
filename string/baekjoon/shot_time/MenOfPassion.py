@@ -6,7 +6,7 @@
 #     return sum;
 # }
 
-# 시간 복잡도 문제
+# 시간 복잡도 문제 루프가 2개라서
 N = int(input())
 print(N**2)
 print(2)
