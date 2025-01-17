@@ -18,7 +18,7 @@ for word in words:
     print(word)
 
 
-# 백준 10814번 문제
+# 백준 10814번 문제 (복습)
 
 import sys
 input = sys.stdin.read
