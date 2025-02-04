@@ -1,4 +1,4 @@
-# 백준 1765번 문제
+# 백준 1735번 문제
 
 import math
 A1, B1 = map(int, input().split())
