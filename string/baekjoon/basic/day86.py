@@ -30,7 +30,29 @@ for i in range(1, n+1):
 
 sys.stdout.write("\n".join(result)+'\n')
 
+# 백준 2346번 문제
 
+from collections import deque
 
+N = int(input())
+# enumerate(객체, 값) 형태로 주로 사용
+# 객체에 인덱스를 지정해서 같이 저장해줌
+# 인덱스에 첫번째 값은 뒤에 값이 지정
+balloons = deque(enumerate(map(int, input().split()), start=1))
+Result = []
 
-# 백준 1186번 복습
+index, move = balloons.popleft()
+Result.append(str(index))
+
+# 모듈러 연산
+while balloons:
+
+    if move > 0:
+        balloons.rotate(-(move-1))
+    else:
+        balloons.rotate(-move)
+    
+    index, move = balloons.popleft()
+    Result.append(str(index))
+
+print(" ".join(Result))
