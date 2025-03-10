@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApp1
+﻿namespace WindowsFormsApp2
 {
     partial class Form1
     {
@@ -28,42 +28,63 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.id = new System.Windows.Forms.TextBox();
+            this.SignInButton = new System.Windows.Forms.Button();
+            this.password = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("SB 어그로 Medium", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button1.Location = new System.Drawing.Point(253, 267);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(251, 81);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "출력";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("SB 어그로 Light", 25.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(255, 121);
+            this.label1.Font = new System.Drawing.Font("Noto Sans KR SemiBold", 19.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Location = new System.Drawing.Point(262, 137);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(249, 83);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "label1";
+            this.label1.Size = new System.Drawing.Size(228, 76);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "로그인창";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // id
+            // 
+            this.id.Location = new System.Drawing.Point(206, 246);
+            this.id.Name = "id";
+            this.id.Size = new System.Drawing.Size(338, 35);
+            this.id.TabIndex = 1;
+            this.id.Text = "아이디";
+            // 
+            // SignInButton
+            // 
+            this.SignInButton.Font = new System.Drawing.Font("Noto Sans KR Medium", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.SignInButton.Location = new System.Drawing.Point(303, 366);
+            this.SignInButton.Name = "SignInButton";
+            this.SignInButton.Size = new System.Drawing.Size(131, 56);
+            this.SignInButton.TabIndex = 3;
+            this.SignInButton.Text = "로그인";
+            this.SignInButton.UseVisualStyleBackColor = true;
+            this.SignInButton.Click += new System.EventHandler(this.SignInButton_Click);
+            // 
+            // password
+            // 
+            this.password.Location = new System.Drawing.Point(206, 303);
+            this.password.Name = "password";
+            this.password.PasswordChar = '*';
+            this.password.Size = new System.Drawing.Size(338, 35);
+            this.password.TabIndex = 4;
+            this.password.Text = "비밀번호";
+            this.password.UseSystemPasswordChar = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.password);
+            this.Controls.Add(this.SignInButton);
+            this.Controls.Add(this.id);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
-            this.ForeColor = System.Drawing.Color.SteelBlue;
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -71,8 +92,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox id;
+        private System.Windows.Forms.Button SignInButton;
+        private System.Windows.Forms.TextBox password;
     }
 }
 
