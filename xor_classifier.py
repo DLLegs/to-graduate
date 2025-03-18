@@ -8,9 +8,12 @@ def xor_classifier_example ():
     xor_labels = tf.cast(xor_labels, tf.float32)
     
     batch_size = 1 
-    epochs = 1500
+    epochs = 500
     
-    mlp_classifier = MLP(hidden_layer_conf=[4], num_output_nodes=1) 
+    mlp_classifier = MLP(hidden_layer_conf=[4], num_output_nodes=1)
+    # hidden_layer를 지우게 되면 input과 output만 있다 SLP 한층짜리는 선형시스템으로 xor 문제를 풀 수 없다
+    # 선형시스템 linear~ 는 직선으로 분류 할 수 없다
+    # mlp_classifier = MLP(hidden_layer_conf=None, num_output_nodes=1) 
     mlp_classifier.build_model()
     mlp_classifier.fit(x=input_data, y=xor_labels, batch_size=batch_size, epochs=epochs)
 
